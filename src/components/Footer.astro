@@ -1,13 +1,18 @@
 ---
+import { SITE_AUTHOR } from "../consts";
+
 const today = new Date();
 ---
 
-<footer>
-  &copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="footer footer-center p-4">
+  <div>
+    <p class="text-xs text-base-content/70">
+      &copy; {today.getFullYear()}
+      <a class="link" href="https://twitter.com/futabooo" target="_blank">
+        {SITE_AUTHOR}
+      </a>
+      All rights reserved. Powered by
+      <a class="link" href="https://astro.build/" target="_blank"> Astro</a>
+    </p>
+  </div>
 </footer>
-<style>
-  footer {
-    padding: 25px;
-    text-align: center;
-  }
-</style>

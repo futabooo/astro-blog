@@ -1,20 +1,19 @@
 ---
 import BaseHead from "@components/BaseHead";
 import Footer from "@components/Footer";
-import FormattedDate from "@components/FormattedDate";
 import Navbar from "@components/Navbar";
 import ThemeChange from "@components/ThemeChange";
-import type { CollectionEntry } from "astro:content";
+import "../styles/global.css";
 
-type Props = CollectionEntry<"blog">["data"];
-
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title } = Astro.props;
+const { description } = Astro.props;
+const { image } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} image={heroImage} />
+    <BaseHead title={title} description={description} image={image} />
     <script is:inline>
       // ☝️ This script prevent the FART effect.
       if (localStorage.getItem("theme") === null) {
@@ -39,27 +38,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <ThemeChange />
       </Navbar>
       <div class="p-4 pb-10">
-        <div class="flex justify-center">
-          <div class="py-6 prose lg:prose-lg">
-            <article>
-              {
-                heroImage && (
-                  <img width={720} height={360} src={heroImage} alt="" />
-                )
-              }
-              <h1 class="title">{title}</h1>
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-              <hr />
-              <slot />
-            </article>
-          </div>
+        <div class="prose lg:prose-lg">
+          <slot />
         </div>
       </div>
     </div>
