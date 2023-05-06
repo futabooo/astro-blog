@@ -1,5 +1,5 @@
 ---
-import FormattedDate from "@components/FormattedDate";
+import BlogListItem from "@components/BlogListItem";
 import Page from "@layouts/Page";
 import { getCollection } from "astro:content";
 
@@ -9,18 +9,5 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <Page>
-  <main>
-    <section>
-      <ul>
-        {
-          posts.map((post) => (
-            <li>
-              <FormattedDate date={post.data.pubDate} />
-              <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-  </main>
+  {posts.map((post) => <BlogListItem post={post} />)}
 </Page>
