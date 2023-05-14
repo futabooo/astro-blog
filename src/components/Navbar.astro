@@ -1,6 +1,6 @@
 ---
 import { SITE_TITLE } from "../consts";
-
+const pathname = new URL(Astro.request.url).pathname;
 const navItem = [
   {
     title: "Blog",
@@ -30,10 +30,16 @@ const navItem = [
     </a>
   </div>
   <div class="flex-none">
-    <ul class="menu menu-horizontal rounded-box p-2 hidden md:flex">
+    <ul class="menu menu-horizontal hidden md:flex">
       {
         navItem.map((item) => (
-          <li>
+          <li
+            class={
+              pathname === item.slug
+                ? "border-b-2 border-primary"
+                : "border-b-2 border-transparent"
+            }
+          >
             <a href={item.slug}>{item.title}</a>
           </li>
         ))
@@ -63,11 +69,17 @@ const navItem = [
       </label>
       <ul
         tabindex={0}
-        class="dropdown-content menu p-2 bg-base-200 rounded-box w-52 menu-compact"
+        class="dropdown-content menu bg-base-200 w-52 menu-compact"
       >
         {
           navItem.map((item) => (
-            <li>
+            <li
+              class={
+                pathname === item.slug
+                  ? "border-l-2 border-primary"
+                  : "border-l-2 border-transparent"
+              }
+            >
               <a href={item.slug}>{item.title}</a>
             </li>
           ))
