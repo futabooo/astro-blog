@@ -1,52 +1,41 @@
 ---
+import BlogListItemSmall from "@components/BlogListItemSmall";
 import Page from "@layouts/Page";
+import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+const posts = (await getCollection("blog"))
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+  .reverse()
+  .slice(0, 3);
 ---
 
 <Page title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <main>
-    <h1>🧑‍🚀 Hello, Astronaut!</h1>
+  <div class="mb-16">
+    <h1 class="text-3xl font-bold mb-4">Hi, I'm futabooo!!</h1>
     <p>
-      Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
-      template. This template serves as a lightweight, minimally-styled starting
-      point for anyone looking to build a personal website, blog, or portfolio with
-      Astro.
+      Welcome to my personal site.🏡
+      <br />
+      <br />
+      株式会社10Xで働くソフトウェアエンジニアです。仕事ではコードを書くことを中心としてチームビルディングやプロセスの効率化を行っています。休日は家族と遊んだり、コードを書いたり、フットサルをしたりしています。
     </p>
-    <p>
-      This template comes with a few integrations already configured in your
-      <code>astro.config.mjs</code> file. You can customize your setup with
-      <a href="https://astro.build/integrations">Astro Integrations</a> to add tools
-      like Tailwind, React, or Vue to your project.
-    </p>
-    <p>Here are a few ideas on how to get started with the template:</p>
-    <ul>
-      <li>Edit this page in <code>src/pages/index.astro</code></li>
-      <li>
-        Edit the site header items in <code>src/components/Header.astro</code>
-      </li>
-      <li>
-        Add your name to the footer in <code>src/components/Footer.astro</code>
-      </li>
-      <li>
-        Check out the included blog posts in <code>src/pages/blog/</code>
-      </li>
-      <li>
-        Customize the blog post page layout in <code
-          >src/layouts/BlogPost.astro</code
-        >
-      </li>
-    </ul>
-    <p>
-      Have fun! If you get stuck, remember to <a
-        href="https://docs.astro.build/"
-        >read the docs
-      </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-    </p>
-    <p>
-      Looking for a blog template with a bit more personality? Check out <a
-        href="https://github.com/Charca/astro-blog-template"
-        >astro-blog-template
-      </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-    </p>
-  </main>
+  </div>
+  <div>
+    <div class="flex justify-between">
+      <h2 class="text-3xl font-bold mb-4">最新の投稿</h2>
+      <a href="/blog">
+        <button class="btn btn-outline btn-sm">もっとみる</button>
+      </a>
+    </div>
+    <div>
+      {
+        posts.map((post, index) => (
+          <div class="">
+            <BlogListItemSmall post={post} />
+            {posts.length - 1 > index && <div class="divider m-0" />}
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </Page>

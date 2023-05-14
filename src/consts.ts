@@ -3,4 +3,4 @@
 
 export const SITE_AUTHOR = "futabooo";
 export const SITE_TITLE = "futabooo";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+export const SITE_DESCRIPTION = "futabooo's personal site";
