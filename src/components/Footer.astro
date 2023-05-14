@@ -1,14 +1,29 @@
 ---
-import { SITE_AUTHOR } from "../consts";
+import Social from "@components/Social";
+import { IC_GITHUB, IC_TWITTER, SITE_AUTHOR } from "../consts";
 
 const today = new Date();
 ---
 
 <footer class="footer footer-center p-4">
+  <div class="flex">
+    <Social
+      class="flex-1"
+      platform="twitter"
+      username={SITE_AUTHOR}
+      imgPath={IC_TWITTER}
+    />
+    <Social
+      class="flex-1"
+      platform="github"
+      username={SITE_AUTHOR}
+      imgPath={IC_GITHUB}
+    />
+  </div>
   <div>
     <p class="text-xs text-base-content/70">
       &copy; {today.getFullYear()}
-      <a class="link" href="https://twitter.com/futabooo" target="_blank">
+      <a class="link" href=`https://twitter.com/${SITE_AUTHOR}` target="_blank">
         {SITE_AUTHOR}
       </a>
       All rights reserved. Powered by
