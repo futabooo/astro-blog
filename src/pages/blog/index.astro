@@ -8,6 +8,6 @@ const posts = (await getCollection("blog"))
   .reverse();
 ---
 
-<Page>
+<Page title="Blog" description="futabooo's Blog list">
   {posts.map((post) => <BlogListItem post={post} />)}
 </Page>
