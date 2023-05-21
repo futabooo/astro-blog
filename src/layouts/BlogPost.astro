@@ -10,6 +10,7 @@ import type { CollectionEntry } from "astro:content";
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const url = new URL(Astro.request.url);
 ---
 
 <!DOCTYPE html>
@@ -39,18 +40,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       <Navbar>
         <ThemeChange />
       </Navbar>
-      <div class="p-4 pt-10 pb-10">
-        <div class="flex justify-center">
-          <div class="prose lg:prose-lg">
-            <article>
-              {
-                heroImage && (
-                  <img width={720} height={360} src={heroImage} alt="" />
-                )
-              }
-              <h1 class="title">{title}</h1>
-              <FormattedDate date={pubDate} />
-            </article>
+      <div class="p-4 pt-10 pb-2">
+        <div class="prose lg:prose-lg">
+          <article>
+            {
+              heroImage && (
+                <img width={720} height={360} src={heroImage} alt="" />
+              )
+            }
+            <h1 class="title">{title}</h1>
+            <FormattedDate date={pubDate} />
+
             {
               updatedDate && (
                 <div class="last-updated-on">
@@ -60,14 +60,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             }
             <hr />
             <slot />
-            <div class="flex justify-center">
-              <TweetButton />
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
-
+    <div class="pb-10"><TweetButton title={title} url={url} /></div>
     <Footer />
   </body>
 </html>

@@ -1,11 +1,11 @@
 ---
+const { title, url } = Astro.props;
+import { IC_TWITTER_LOGO } from "../consts";
 ---
 
-<a
-  href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-  class="twitter-share-button"
-  data-lang="ja"
-  data-dnt="true"
-  data-show-count="false">Tweet</a
-><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
-></script>
+<a href=`https://twitter.com/intent/tweet?text=${title}&url=${url}`>
+  <button class="btn btn-outline gap-2">
+    <img class="w-4 h-4" src=`/${IC_TWITTER_LOGO}` />
+    Tweet
+  </button>
+</a>
