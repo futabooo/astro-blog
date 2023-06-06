@@ -11,12 +11,17 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.0",
+    "@astrojs/react": "^2.2.1",
     "@astrojs/rss": "^2.4.0",
     "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.2",
     "@fontsource/noto-sans-jp": "^4.5.12",
+    "@types/react": "^18.2.8",
+    "@types/react-dom": "^18.2.4",
     "astro": "^2.3.4",
     "daisyui": "^2.51.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.2",
     "theme-change": "^2.5.0"
   },
@@ -27,6 +32,9 @@
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-astro": "^0.26.1",
-    "eslint-plugin-jsx-a11y": "^6.7.1"
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "front-matter": "^4.0.2",
+    "satori": "^0.8.1",
+    "sharp": "^0.32.1"
   }
 }

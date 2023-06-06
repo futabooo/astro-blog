@@ -11,11 +11,10 @@ export async function getStaticPaths() {
 }
 
 type Props = CollectionEntry<"blog">;
-
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data}>
+<BlogPost blogData={post.data} ogImage={`/blog/${post.slug}/ogp.png`}>
   <Content />
 </BlogPost>
