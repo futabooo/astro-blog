@@ -19,7 +19,6 @@ const generate = async (title: string) => {
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
-        letterSpacing: "-.02em",
         fontWeight: 700,
         background: "#fff",
       }}
@@ -31,8 +30,9 @@ const generate = async (title: string) => {
           width: "90%",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "10px 10px 0 #000",
-          border: "2px solid #000",
+          boxShadow: "10px 10px 0 #394e6a",
+          border: "3px solid #394e6a",
+          borderRadius: "30px 30px 0 0",
         }}
       >
         <div
@@ -40,22 +40,21 @@ const generate = async (title: string) => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
-            padding: "20px 50px",
-            margin: "0 42px",
+            letterSpacing: "-2",
             fontSize: 70,
             width: "auto",
-            maxWidth: 1000,
+            maxWidth: "92%",
             textAlign: "center",
             color: "black",
-            lineHeight: 1.4,
+            lineHeight: 1,
           }}
         >
           <p>{title}</p>
         </div>
         <div
           style={{
-            right: 42,
-            bottom: 42,
+            right: 60,
+            bottom: 30,
             position: "absolute",
             display: "flex",
             alignItems: "center",
