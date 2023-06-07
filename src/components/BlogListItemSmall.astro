@@ -12,7 +12,7 @@ const { post } = Astro.props;
 <div>
   <a class="flex justify-between group" href={`/blog/${post.slug}`}>
     <h2 class="text-xl font-bold group-hover:underline">{post.data.title}</h2>
-    <p class="min-w-fit ps-4 text-sm text-base-content/70 invisible md:visible">
+    <p class="min-w-fit ps-4 text-sm invisible md:visible">
       <FormattedDate date={post.data.pubDate} />
     </p>
   </a>

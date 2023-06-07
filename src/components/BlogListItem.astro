@@ -10,11 +10,11 @@ const { post } = Astro.props;
 ---
 
 <div class="pb-8">
-  <p class="text-sm text-base-content/70">
+  <p class="text-sm">
     <FormattedDate date={post.data.pubDate} />
   </p>
   <h2 class="text-xl font-bold">
     <a class="hover:underline" href={`/blog/${post.slug}`}>{post.data.title}</a>
   </h2>
-  <p class="text-sm text-base-content/70">{post.data.description}</p>
+  <p class="text-sm">{post.data.description}</p>
 </div>
