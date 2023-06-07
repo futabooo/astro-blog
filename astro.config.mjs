@@ -8,10 +8,16 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://futabooo.pages.dev",
-  integrations: [mdx(), sitemap(), tailwind(), createOGImage({
-    config: {
-      path: "blog/"
-    }
-  }), react()]
+  site: "https://futabooo.com",
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind(),
+    createOGImage({
+      config: {
+        path: "blog/",
+      },
+    }),
+    react(),
+  ],
 });

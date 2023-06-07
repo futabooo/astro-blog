@@ -26,7 +26,7 @@ const generate = async (title: string) => {
       <div
         style={{
           display: "flex",
-          height: "90%",
+          height: "80%",
           width: "90%",
           alignItems: "center",
           justifyContent: "center",
@@ -37,11 +37,12 @@ const generate = async (title: string) => {
       >
         <div
           style={{
+            marginBottom: 30,
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
             letterSpacing: "-2",
-            fontSize: 70,
+            fontSize: 82,
             width: "auto",
             maxWidth: "92%",
             textAlign: "center",
