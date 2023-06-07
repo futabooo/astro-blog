@@ -20,4 +20,7 @@ export default defineConfig({
     }),
     react(),
   ],
+  experimental: {
+    assets: true,
+  },
 });
