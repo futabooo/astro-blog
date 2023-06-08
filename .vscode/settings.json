@@ -14,5 +14,6 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "pasteImage.path": "${projectRoot}/src/assets/${currentFileNameWithoutExt}"
+  "pasteImage.path": "${projectRoot}/src/assets/${currentFileNameWithoutExt}",
+  "pasteImage.defaultName": "YMMDDHHmmss"
 }
