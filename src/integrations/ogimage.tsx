@@ -42,10 +42,10 @@ const generate = async (title: string) => {
             flexWrap: "wrap",
             justifyContent: "center",
             letterSpacing: "-2",
-            fontSize: 82,
+            fontSize: 60,
             width: "auto",
             maxWidth: "92%",
-            textAlign: "center",
+            textAlign: "start",
             color: "black",
             lineHeight: 1,
           }}
