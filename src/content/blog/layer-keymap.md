@@ -1,6 +1,7 @@
 ---
 title: "Choco60 rev.2でレイヤーを使ったキーマップを使ってみる"
 description: "Choco60 rev.2でレイヤーを使ったキーマップを使ってみる"
+tags: ['keyboard']
 pubDate: "2023/04/10"
 ---
 

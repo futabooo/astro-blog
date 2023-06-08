@@ -1,5 +1,6 @@
 ---
 import FormattedDate from "@components/FormattedDate";
+import TagBadge from "@components/TagBadge";
 import type { CollectionEntry } from "astro:content";
 interface Props {
   post: CollectionEntry<"blog">;
@@ -13,8 +14,10 @@ const { post } = Astro.props;
   <p class="text-sm">
     <FormattedDate date={post.data.pubDate} />
   </p>
-  <h2 class="text-xl font-bold">
+  <h2 class="text-xl font-bold mb-1.5">
     <a class="hover:underline" href={`/blog/${post.slug}`}>{post.data.title}</a>
   </h2>
-  <p class="text-sm">{post.data.description}</p>
+  <div class="flex flex-row flex-wrap gap-1">
+    {post.data.tags.map((tag) => <TagBadge name={tag} />)}
+  </div>
 </div>

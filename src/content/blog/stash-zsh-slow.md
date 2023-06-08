@@ -1,6 +1,7 @@
 ---
 title: "zshの起動が遅いので調べたらgoogle-cloud-sdkのせいだった"
 description: "zshの起動が遅いので調べたらgoogle-cloud-sdkのせいだった"
+tags: ["shell"]
 pubDate: "2023/03/10"
 ---
 

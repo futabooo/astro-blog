@@ -1,6 +1,7 @@
 ---
 title: "自動化ツールMake（旧Integromat）を使ってTwitterに#FitBoxing2の投稿をしたらPOST requestを作成する"
 description: "自動化ツールMake（旧Integromat）を使ってTwitterに#FitBoxing2の投稿をしたらPOST requestを作成する"
+tags: ["Pixela", "Cloud Run", "Dart"]
 pubDate: "2023/01/16"
 ---
 

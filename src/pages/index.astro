@@ -1,13 +1,21 @@
 ---
 import BlogListItemSmall from "@components/BlogListItemSmall";
+import TagBadge from "@components/TagBadge";
 import Page from "@layouts/Page";
 import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
-const posts = (await getCollection("blog"))
+const allPosts = (await getCollection("blog"))
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
-  .reverse()
-  .slice(0, 3);
+  .reverse();
+const newestPosts = allPosts.slice(0, 3);
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+const tagWithCountList = tags.map((tag) => {
+  const count = allPosts.filter(
+    (post) => tag && post.data.tags?.includes(tag)
+  ).length;
+  return { name: tag, count };
+});
 ---
 
 <Page title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -29,11 +37,20 @@ const posts = (await getCollection("blog"))
     </div>
     <div>
       {
-        posts.map((post, index) => (
+        newestPosts.map((post, index) => (
           <div class="">
             <BlogListItemSmall post={post} />
-            {posts.length - 1 > index && <div class="divider m-0" />}
+            {newestPosts.length - 1 > index && <div class="divider m-0" />}
           </div>
+        ))
+      }
+    </div>
+
+    <h2 class="text-3xl font-bold mb-4 mt-14">Tag一覧</h2>
+    <div class="flex flex-row flex-wrap gap-1">
+      {
+        tagWithCountList.map((tagWithCount) => (
+          <TagBadge name={tagWithCount.name} count={tagWithCount.count} />
         ))
       }
     </div>
