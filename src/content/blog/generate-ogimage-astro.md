@@ -133,7 +133,7 @@ export default defineConfig({
 ```
 
 `await satori()`の第1引数に渡しているjsxが最終的なレイアウトを決める感じです。
-jsdで書くためにreactも導入が必要なので入れておきます。
+jsxで書くためにreactも導入が必要なので入れておきます。
 
 >https://docs.astro.build/en/guides/integrations-guide/react/
 
