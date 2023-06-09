@@ -4,7 +4,9 @@ import Page from "@layouts/Page";
 import { CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("blog");
+  const allPosts = (await getCollection("blog"))
+    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+    .reverse();
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
   ];
