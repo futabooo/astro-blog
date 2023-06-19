@@ -3,6 +3,7 @@ import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import remarkLinkCard from "remark-link-card";
 import { createOGImage } from "./src/integrations/ogimage";
 
 import react from "@astrojs/react";
@@ -10,6 +11,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://futabooo.com",
+  markdown: {
+    remarkPlugins: [remarkLinkCard],
+  },
   integrations: [
     mdx(),
     sitemap(),

@@ -18,9 +18,11 @@ Twitterなどにリンクを貼り付けた時に特定のmetadataに設定さ�
 Astro Integration APIを使ってbuild完了時に画像生成処理を呼び出すと言う方法で実現しました。
 画像はsatoriとsharpを使ってjsxからpng画像を生成します。
 
->- https://docs.astro.build/en/reference/integrations-reference/
->- https://github.com/vercel/satori
->- https://github.com/lovell/sharp
+https://docs.astro.build/en/reference/integrations-reference/
+
+https://github.com/vercel/satori
+
+https://github.com/lovell/sharp
 
 
 下記に実際のコードのせておきます。
@@ -135,18 +137,20 @@ export default defineConfig({
 `await satori()`の第1引数に渡しているjsxが最終的なレイアウトを決める感じです。
 jsxで書くためにreactも導入が必要なので入れておきます。
 
->https://docs.astro.build/en/guides/integrations-guide/react/
+https://docs.astro.build/en/guides/integrations-guide/react/
 
 ## Playgroundを使ってレイアウトを作成する
 
 公式のPlayground環境があるのでそこでstyleを調整するとレイアウトは比較的ラクに作れます。
 
 https://og-playground.vercel.app/
+
 ![OG Image Playground](../../assets/create-personal-site-use-astro/20230610002002.png)
 
 ## SSGするかSSRするか
 
 今回の自分の方法はSSGということになるとおもいます。OGImage自体はbuild時に作成してdist配下に保存してあります。SSRで作成する方法もあり、それはこの記事の最初にはったGitHubの画像のリポジトリで行われている方法で、AstroのEndpoints機能を使って実現されています。
 
->- https://github.com/satnaing/astro-paper/pull/15
->- https://docs.astro.build/en/core-concepts/endpoints/
+https://github.com/satnaing/astro-paper/pull/15
+
+https://docs.astro.build/en/core-concepts/endpoints/
