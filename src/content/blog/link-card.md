@@ -1,7 +1,7 @@
 ---
 title: "Astroでremark-link-cardをつかってリンクをカード形式で表示する"
 description: "Astroでmarkdownで書いた記事をtailwindcss/typographyで表示する際にリンクをカード形式にする"
-tags: ["Astro",""]
+tags: ["Astro","remark"]
 pubDate: "2023/07/17"
 ---
 
