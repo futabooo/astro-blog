@@ -4,10 +4,11 @@ import Social from "@components/Social";
 import { IC_GITHUB, IC_TWITTER, SITE_AUTHOR } from "../consts";
 
 const today = new Date();
+const isProd = import.meta.env.PROD;
 ---
 
 <footer class="footer footer-center p-4">
-  <PageView />
+  {isProd && <PageView />}
   <div class="flex">
     <Social
       class="flex-1"
