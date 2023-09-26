@@ -1,7 +1,7 @@
 ---
 import BlogListItem from "@components/BlogListItem";
 import Page from "@layouts/Page";
-import { CollectionEntry, getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const allPosts = (await getCollection("blog"))
@@ -31,7 +31,7 @@ type Props = {
 const { tag, posts } = Astro.props;
 ---
 
-<Page title={tag} description=`{tag} Blog list` `>
+<Page title={tag} description=`{tag} Blog list`>
   <h2 class="text-2xl font-bold mb-3">Tags: #{tag}</h2>
   {posts.map((post) => <BlogListItem post={post} />)}
 </Page>
