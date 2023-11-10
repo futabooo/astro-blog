@@ -10,12 +10,10 @@ const isProd = import.meta.env.PROD;
 <footer class="footer footer-center p-4">
   {isProd && <PageView />}
   <div class="flex">
-    <Social
-      class="flex-1"
-      platform="twitter"
-      username={SITE_AUTHOR}
-      imgPath={IC_TWITTER}
-    />
+    <div class="flex-1 w-7">
+      <Social platform="twitter" username={SITE_AUTHOR} imgPath={IC_TWITTER} />
+    </div>
+
     <Social
       class="flex-1"
       platform="github"
@@ -25,11 +23,11 @@ const isProd = import.meta.env.PROD;
   </div>
   <div>
     <p class="text-xs">
-      &copy; {today.getFullYear()}
+      &copy;{today.getFullYear()}&nbsp;
       <a class="link" href=`https://twitter.com/${SITE_AUTHOR}` target="_blank">
         {SITE_AUTHOR}
       </a>
-      All rights reserved. Powered by
+       All rights reserved. Powered by
       <a class="link" href="https://astro.build/" target="_blank"> Astro</a>
     </p>
   </div>
