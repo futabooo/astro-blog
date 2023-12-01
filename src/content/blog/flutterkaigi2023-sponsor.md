@@ -2,7 +2,7 @@
 title: "技術カンファレンスのスポンサー企業ブースに社員として参加する際に意識したいこと"
 description: "FlutterKaigi2023のスポンサー企業ブースに10X社員として参加したのでその時に意識したことや気付き学びについて"
 tags: ['diary']
-pubDate: "2024/11/10"
+pubDate: "2023/11/10"
 ---
 ![](../../assets/flutterkaigi2023-sponsor/20231111002238.jpeg)
 ## はじめに
