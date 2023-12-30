@@ -5,25 +5,24 @@ tags: ["Astro"]
 pubDate: "2023/06/10"
 ---
 
-## OGImageとは
+## OGImage とは
 
 こういうやつですね。
-![](../../assets/create-personal-site-use-astro/20230610002956.png)
+![](../../../assets/2023/create-personal-site-use-astro/20230610002956.png)
 
-Twitterなどにリンクを貼り付けた時に特定のmetadataに設定されているURLを表示してくれるやつです。
+Twitter などにリンクを貼り付けた時に特定の metadata に設定されている URL を表示してくれるやつです。
 
-## OGImage用のpng画像を作成する
+## OGImage 用の png 画像を作成する
 
 個人のブログで毎回画像を手で作るのはしんどいので、テンプレ的な画像内の文字だけ変えるようなものを作成します。
-Astro Integration APIを使ってbuild完了時に画像生成処理を呼び出すと言う方法で実現しました。
-画像はsatoriとsharpを使ってjsxからpng画像を生成します。
+Astro Integration API を使って build 完了時に画像生成処理を呼び出すと言う方法で実現しました。
+画像は satori と sharp を使って jsx から png 画像を生成します。
 
 https://docs.astro.build/en/reference/integrations-reference/
 
 https://github.com/vercel/satori
 
 https://github.com/lovell/sharp
-
 
 下記に実際のコードのせておきます。
 
@@ -134,22 +133,22 @@ export default defineConfig({
 });
 ```
 
-`await satori()`の第1引数に渡しているjsxが最終的なレイアウトを決める感じです。
-jsxで書くためにreactも導入が必要なので入れておきます。
+`await satori()`の第 1 引数に渡している jsx が最終的なレイアウトを決める感じです。
+jsx で書くために react も導入が必要なので入れておきます。
 
 https://docs.astro.build/en/guides/integrations-guide/react/
 
-## Playgroundを使ってレイアウトを作成する
+## Playground を使ってレイアウトを作成する
 
-公式のPlayground環境があるのでそこでstyleを調整するとレイアウトは比較的ラクに作れます。
+公式の Playground 環境があるのでそこで style を調整するとレイアウトは比較的ラクに作れます。
 
 https://og-playground.vercel.app/
 
-![OG Image Playground](../../assets/create-personal-site-use-astro/20230610002002.png)
+![OG Image Playground](../../../assets/2023/create-personal-site-use-astro/20230610002002.png)
 
-## SSGするかSSRするか
+## SSG するか SSR するか
 
-今回の自分の方法はSSGということになるとおもいます。OGImage自体はbuild時に作成してdist配下に保存してあります。SSRで作成する方法もあり、それはこの記事の最初にはったGitHubの画像のリポジトリで行われている方法で、AstroのEndpoints機能を使って実現されています。
+今回の自分の方法は SSG ということになるとおもいます。OGImage 自体は build 時に作成して dist 配下に保存してあります。SSR で作成する方法もあり、それはこの記事の最初にはった GitHub の画像のリポジトリで行われている方法で、Astro の Endpoints 機能を使って実現されています。
 
 https://github.com/satnaing/astro-paper/pull/15
 
