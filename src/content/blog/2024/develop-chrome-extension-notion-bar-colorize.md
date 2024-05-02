@@ -111,6 +111,9 @@ https://github.com/futabooo/notion-bar-colorize/pull/8
 
 GitHub Actions の Deploy Docs を実行することで最初に書いた URL に公開されます。
 
+これまではGitHub Pagesで公開する成果物もリポジトリ管理に含める必要がりましたが、GitHub Actionsに生成とデプロイを任せることができるようになっています。
+https://github.blog/changelog/2024-03-25-github-pages-with-custom-github-actions-workflows-are-now-generally-available/
+
 ### GitHub Discussions でサポートページを用意する
 
 プライバシーポリシーには問い合わせ先が必要になります。[GithHub Discussions](https://github.com/futabooo/notion-bar-colorize/discussions)のリンクをこちらにはりました。質問内容と回答を公開できる、誰でも回答できるようにして用意することで運用コストを削減できると考えたからです。
