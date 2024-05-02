@@ -105,16 +105,14 @@ Chrome Web Store に公開する際に必須となる情報がいくつかある
 
 Jekyll を GitHub Pages として公開するためのものを流用することで実現します。実際に今回作った プライバシーポリシー は[Privacy Policy for Notion Bar Colorize](https://futabooo.github.io/notion-bar-colorize/privacy-policy)です。
 
-docs フォルダをプロジェクトのルートに用意し、privacy-policy.md を作成します。用意したファイルを GitHub Pages として公開するための GitHub Actions を追加します。
-
-https://github.com/futabooo/notion-bar-colorize/pull/8
+docs フォルダをプロジェクトのルートに用意し、privacy-policy.md を作成します。用意したファイルを GitHub Pages として公開するための GitHub Actions を追加します。[privacy policy を GitHub Pages で公開できるようにする #8](https://github.com/futabooo/notion-bar-colorize/pull/8)
 
 GitHub Actions の Deploy Docs を実行することで最初に書いた URL に公開されます。
 
-これまではGitHub Pagesで公開する成果物もリポジトリ管理に含める必要がりましたが、GitHub Actionsに生成とデプロイを任せることができるようになっています。
+これまでは GitHub Pages で公開する成果物もリポジトリ管理に含める必要がりましたが、GitHub Actions に生成とデプロイを任せることができるようになっています。
+
 https://github.blog/changelog/2024-03-25-github-pages-with-custom-github-actions-workflows-are-now-generally-available/
 
 ### GitHub Discussions でサポートページを用意する
 
 プライバシーポリシーには問い合わせ先が必要になります。[GithHub Discussions](https://github.com/futabooo/notion-bar-colorize/discussions)のリンクをこちらにはりました。質問内容と回答を公開できる、誰でも回答できるようにして用意することで運用コストを削減できると考えたからです。
-
