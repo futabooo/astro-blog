@@ -15,7 +15,7 @@ https://github.com/futabooo/notion-bar-colorize
 
 # 開発
 
-## CRXJS Vite Plugin をつかって TypeScrit で開発する
+## CRXJS Vite Plugin をつかって TypeScript で開発する
 
 開発者体験をよくしたいので何かしらフレームワークを使うことを検討しました。
 調べ始めたころは[Plasmo](https://www.plasmo.com/)を使おうかとも思っていたのですが、色々と機能があるものの Plasmo Way に引っ張られるのも懸念がありました。
