@@ -116,3 +116,7 @@ https://github.blog/changelog/2024-03-25-github-pages-with-custom-github-actions
 ### GitHub Discussions でサポートページを用意する
 
 プライバシーポリシーには問い合わせ先が必要になります。[GithHub Discussions](https://github.com/futabooo/notion-bar-colorize/discussions)のリンクをこちらにはりました。質問内容と回答を公開できる、誰でも回答できるようにして用意することで運用コストを削減できると考えたからです。
+
+# おわりに
+
+Chrome Extension を作って公開するところまでを書きました。Chrome Web Store に公開後は管理画面でインストール数やインプレッション数が見れるので毎日見てます。ストア公開の自動化などまだやり残したことがあるのでそのうちやりたいと思います。
