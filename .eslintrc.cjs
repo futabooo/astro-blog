@@ -12,12 +12,6 @@ module.exports = {
     "plugin:astro/recommended",
     "prettier",
   ],
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: "./tsconfig.json",
-  },
-  // ...
   overrides: [
     {
       // Define the configuration for `.astro` file.
