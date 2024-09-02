@@ -5,9 +5,11 @@ tags: ["Book Review"]
 pubDate: "2025/09/02"
 ---
 
+![](../../../assets/2024/book-review-learning-from-gitlab/20240902232027.png)
+
 積読していたのをついに読んだので感想を残す。
 
-https://www.amazon.co.jp/dp/B0CBR9GYF6?&linkCode=ll1&tag=futabooo-22&linkId=4aac25e8b0ba9c433042045af61ca8f4&language=ja_JP&ref_=as_li_ss_tl
+https://amzn.to/3Xqy5NK
 
 GitLab 自体が世界中で働く人がいてフルリモートの企業です。そんな GitLab が公開している GitLab Handbook の内容を抜粋して紹介するような書籍なので、読んでみて興味が湧いたら GitLab Handbook の方も気になるトピックに目を通してみるといいかもしれません。
 
