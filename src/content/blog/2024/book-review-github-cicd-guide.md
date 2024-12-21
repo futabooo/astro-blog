@@ -1,6 +1,6 @@
 ---
-title: "GitHub CI/CD実践ガイドを読んだ - 持続可能なソフトウェア開発を支えるGitHub Actionsの設計と運用を読んだ"
-description: "GitHub CI/CD実践ガイドを読んだ - 持続可能なソフトウェア開発を支えるGitHub Actionsの設計と運用を読んだのでその感想をまとめます。"
+title: "GitHub CI/CD実践ガイド - 持続可能なソフトウェア開発を支えるGitHub Actionsの設計と運用を読んだ"
+description: "GitHub CI/CD実践ガイド - 持続可能なソフトウェア開発を支えるGitHub Actionsの設計と運用を読んだのでその感想をまとめます。"
 tags: ["Book Review"]
 pubDate: "2024/12/22"
 ---
