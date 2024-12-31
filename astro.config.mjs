@@ -11,6 +11,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://futabooo.com",
+  redirects: {
+    "blog/software-estimation/": "blog/2023/software-estimation/",
+  },
   markdown: {
     remarkPlugins: [remarkLinkCard],
   },
