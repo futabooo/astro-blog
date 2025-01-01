@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actionsとtagprを使ってpub.devへのリリースを楽にする"
 description: "GitHub Actionsとtagprを使ってDartやFlutterのライブラリをpub.devへのリリースを楽にする方法を紹介します"
-tags: ["GitHub Actions", "CI/CD"]
+tags: ["GitHub Actions", "CICD"]
 pubDate: "2024/12/31"
 ---
 
