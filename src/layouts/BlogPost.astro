@@ -31,7 +31,7 @@ const url = new URL(Astro.url);
       </Navbar>
       <div class="p-4 pt-6 pb-2">
         <div class="prose lg:prose-lg">
-          <article>
+          <article data-pagefind-body>
             {
               blogData.heroImage && (
                 <img width={720} height={360} src={blogData.heroImage} alt="" />
