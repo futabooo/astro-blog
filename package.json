@@ -19,6 +19,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "astro": "^5.1.2",
+    "budoux": "^0.6.3",
     "daisyui": "^4.12.14",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
