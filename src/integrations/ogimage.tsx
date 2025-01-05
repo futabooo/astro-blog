@@ -1,11 +1,16 @@
 import type { AstroIntegration } from "astro";
+import { loadDefaultJapaneseParser } from "budoux";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import satori from "satori";
 import sharp from "sharp";
 
+const parser = loadDefaultJapaneseParser();
+
 const generate = async (title: string) => {
+  const words = parser.parse(title);
+
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   const font = fs.readFileSync(
@@ -50,7 +55,11 @@ const generate = async (title: string) => {
             lineHeight: 1,
           }}
         >
-          <p>{title}</p>
+          {words.map((word) => {
+            // satoriではinline-blockは使用できないため、明示的にblockを指定する
+            // https://github.com/facebook/yoga/issues/968
+            return <span style={{ display: "block" }}>{word}</span>;
+          })}
         </div>
         <div
           style={{
