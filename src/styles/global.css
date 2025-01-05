@@ -9,6 +9,21 @@
   }
 }
 
+/*
+モーダル表示時にガタつくのを防ぐworkaround
+https://github.com/saadeghi/daisyui/issues/3040#issuecomment-2250530354
+*/
+:root:has(
+    :is(
+        .modal-open,
+        .modal:target,
+        .modal-toggle:checked + .modal,
+        .modal[open]
+      )
+  ) {
+  scrollbar-gutter: unset;
+}
+
 .rlc-container {
   width: 100%;
   max-width: 800px;
