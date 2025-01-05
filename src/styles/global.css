@@ -11,6 +11,8 @@
 
 /*
 モーダル表示時にガタつくのを防ぐworkaround
+デスクトップ表示で両サイドが白くなるけどしかたない
+DaisyUI V5でなおるっぽい
 https://github.com/saadeghi/daisyui/issues/3040#issuecomment-2250530354
 */
 :root:has(
@@ -21,7 +23,7 @@ https://github.com/saadeghi/daisyui/issues/3040#issuecomment-2250530354
         .modal[open]
       )
   ) {
-  scrollbar-gutter: unset;
+  scrollbar-gutter: stable both-edges;
 }
 
 .rlc-container {
