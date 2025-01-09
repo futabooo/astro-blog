@@ -39,14 +39,7 @@
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
 <script is:inline>
   document.getElementById("search").addEventListener("click", () => {
-    console.log("🍎🍎🍎click");
     document.getElementById("searchModal").showModal();
-  });
-  document.getElementById("searchModal").addEventListener("open", () => {
-    console.log("🍎🍎🍎shown modal");
-    document
-      .querySelector(".pagefind-ui__form.pagefind-ui__search-input")
-      .focus();
   });
   document.addEventListener("DOMContentLoaded", () => {
     new PagefindUI({ element: "#search-box" });
