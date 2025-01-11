@@ -3,9 +3,8 @@ title: "Keyball44を組み立てた"
 description: "Keyball44を組み立てた"
 tags: ["keyboard"]
 pubDate: "2023/10/05"
+eyeCatchImg: "src/assets/2023/build-keyball44-keyboard/20231005021215.jpg"
 ---
-
-![実際に組み立てたKeyball44](../../../assets/2023/build-keyball44-keyboard/20231005021215.jpg "実際に組み立てたKeyball44")
 
 ## Keyball44 を購入した理由
 

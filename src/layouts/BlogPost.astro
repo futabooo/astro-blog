@@ -6,6 +6,7 @@ import Navbar from "@components/Navbar";
 import Search from "@components/Search";
 import ThemeChange from "@components/ThemeChange";
 import TweetButton from "@components/TweetButton";
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 type Props = { blogData: CollectionEntry<"blog">["data"]; ogImage: string };
@@ -20,7 +21,7 @@ const url = new URL(Astro.url);
     <BaseHead
       title={blogData.title}
       description={blogData.description}
-      image={blogData.heroImage ?? ogImage}
+      image={blogData.eyeCatchImg?.src ?? ogImage}
     />
   </head>
   <body class="flex flex-col items-center h-screen">
@@ -31,15 +32,23 @@ const url = new URL(Astro.url);
       </Navbar>
       <div class="p-4 pt-6 pb-2">
         <div class="prose lg:prose-lg">
-          <article data-pagefind-body>
+          <article
+            data-pagefind-body
+            data-pagefind-meta={`image:${blogData.eyeCatchImg?.src ?? ogImage}`}
+          >
             {
-              blogData.heroImage && (
-                <img width={720} height={360} src={blogData.heroImage} alt="" />
+              blogData.eyeCatchImg && (
+                <Image
+                  width={720}
+                  height={360}
+                  src={blogData.eyeCatchImg}
+                  alt=""
+                />
               )
             }
+
             <h1 class="title">{blogData.title}</h1>
             <FormattedDate date={blogData.pubDate} />
-
             {
               blogData.updatedDate && (
                 <div class="last-updated-on">
