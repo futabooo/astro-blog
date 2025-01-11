@@ -1,7 +1,7 @@
 ---
 title: "Astroで作ってる個人ブログにPagefindを導入して検索機能を追加する"
 description: "Astroで作ってる個人ブログにPagefindを導入して検索機能を追加する手順を説明します"
-tags: ["Astro, Pagefind, Tailwind CSS"]
+tags: ["Astro", "Pagefind", "Tailwind CSS"]
 pubDate: "2025/01/12"
 ---
 
