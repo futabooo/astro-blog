@@ -31,16 +31,17 @@ const url = new URL(Astro.url);
         <ThemeChange />
       </Navbar>
       <div class="p-4 pt-6 pb-2">
-        <div class="prose lg:prose-lg">
+        <div>
           <article
+            class="prose max-w-none"
             data-pagefind-body
             data-pagefind-meta={`image:${blogData.eyeCatchImg?.src ?? ogImage}`}
           >
             {
               blogData.eyeCatchImg && (
                 <Image
-                  width={720}
-                  height={360}
+                  width={768}
+                  height={300}
                   src={blogData.eyeCatchImg}
                   alt=""
                 />
