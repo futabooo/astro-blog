@@ -21,10 +21,10 @@
 </label>
 
 <style>
- :global(html[data-theme='light']) .sun {
+ :global(html[data-theme='winter']) .sun {
   opacity: 1;
  }
- :global(html[data-theme='light']) .moon {
+ :global(html[data-theme='winter']) .moon {
   opacity: 0;
  }
  :global(html[data-theme='night']) .sun {
@@ -43,7 +43,7 @@ const theme = (() => {
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     return "night";
   }
-  return "light";
+  return "winter";
 })();
 document.documentElement.setAttribute("data-theme", theme);
 window.localStorage.setItem("theme", theme);
@@ -51,12 +51,12 @@ window.localStorage.setItem("theme", theme);
 const handleToggleClick = () => {
   const element = document.documentElement;
   const theme = element.getAttribute("data-theme")
-  if (theme === "light") {
+  if (theme === "winter") {
     element.setAttribute("data-theme", "night");
     localStorage.setItem("theme", "night");
   } else {
-    element.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
+    element.setAttribute("data-theme", "winter");
+    localStorage.setItem("theme", "winter");
   }
 };
 document

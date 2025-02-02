@@ -55,7 +55,7 @@ NavBar にある検索アイコンを押して検索してみると実際の動�
     --pagefind-ui-font: Noto Sans JP, Proxima Nova, system-ui, sans-serif !important;
   }
 
-  [data-theme="light"] {
+  [data-theme="winter"] {
     --pagefind-ui-primary: #1f2937 !important;
     --pagefind-ui-text: #374151 !important;
     --pagefind-ui-background: #ffffff !important;
